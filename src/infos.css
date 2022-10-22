@@ -1,0 +1,35 @@
+.infos h1{
+    text-align: center;
+    color: rgb(49, 49, 51);
+    color: #334155;
+    margin-top: 2rem;
+    text-transform: capitalize;
+    font-size: 2.5rem;
+}
+.infos{
+    margin: 0;
+    padding: 0;
+
+}
+.infos p{
+    margin: 1rem 0;
+}
+.footer{
+    position: absolute;
+    bottom: 10px;
+    left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+.infos .img{
+    width: 200px;
+    height: 205px;
+    background-image: url('./assets/eth.png');
+    background-size: cover;
+    background-position: center;
+    margin: 5rem auto;
+
+ }
+

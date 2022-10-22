@@ -1,12 +1,11 @@
-import React , {useState} from "react"
+import React , {useState}  from "react"
 import {Routes, Route, useNavigate} from 'react-router-dom';
-
 import Home from "./home";
 import arrow from './assets/arrow.svg'
 import google from './assets/google.svg'
 import mac from './assets/mac.svg'
 import fb from './assets/fb.svg'
-export default function Form(){
+export default function Form(props){
    
     const [form ,  setFom] = useState({
         first_name : "" , 
@@ -23,8 +22,18 @@ export default function Form(){
         }))
        
     }
+
+    React.useEffect(
+        ()=>{
+            sessionStorage.setItem("form" , JSON.stringify(form));
+            handle
+        }
+    )
+    
     return(
-        <div className="form">
+        <div className="app">
+         <div className="aside"></div>
+        <div className="form" onSubmit={props.submit}>
             <h1>Create Account</h1>
             <form action="">
                 
@@ -47,6 +56,8 @@ export default function Form(){
                 </div>
 
                 
+        </div>
+
         </div>
     )
 }
